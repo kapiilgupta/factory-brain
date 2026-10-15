@@ -10,6 +10,7 @@ import errorHandler from './middlewares/errorHandler.js';
 import authRouter from "./routes/auth.js"
 import productRouter from "./routes/product.js"
 import inventoryRouter from "./routes/inventory.js"
+import machinesRouter from "./routes/machines.js"
 
 // Connect to MongoDB
 connectDB();
@@ -36,6 +37,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
 app.use('/api/inventory', inventoryRouter);
+app.use('/api/machines', machinesRouter)
 
 //Fallback for unknown API routes
 app.use('/api/*', (req, res) => {
