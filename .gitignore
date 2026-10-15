@@ -1,0 +1,19 @@
+# Dependencies — never push these (too large, can be reinstalled)
+node_modules/
+
+# Environment files — contain secrets, NEVER push to GitHub
+.env
+.env.*
+!.env.example
+
+# Next.js build output
+.next/
+out/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Private planning & interview prep files (local only)
+INTERVIEW_QUESTIONS.md
+implementation_plan*.md
