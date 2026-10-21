@@ -23,7 +23,7 @@ export const getDashboardSummary = async (req, res, next) => {
             inProgressOrdersCount,
             stockAggregate,
         ] = await Promise.all([
-            Product.countDocuments({ userId, isDeleted: false }),
+            Product.countDocuments({ userId, isActive: true }),
             Inventory.countDocuments({ userId }),
             Machine.countDocuments({ userId, isOperational: true }),
             Machine.countDocuments({ userId }),
