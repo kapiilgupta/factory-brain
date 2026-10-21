@@ -1,11 +1,5 @@
 import express from 'express';
-import {
-    getMachines,
-    getMachineById,
-    createMachine,
-    updateMachine,
-    deleteMachine,
-} from '../controllers/machineController.js';
+import { getMachines, getMachineById, createMachine, updateMachine, deleteMachine } from '../controllers/machineController.js';
 import { authenticateUser } from '../middlewares/auth.js';
 
 const router = express.Router();

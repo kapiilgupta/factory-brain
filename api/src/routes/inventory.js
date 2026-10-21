@@ -1,9 +1,5 @@
 import express from 'express';
-import {
-    getInventory,
-    getInventoryAlerts,
-    updateStockBySku,
-} from '../controllers/inventoryController.js';
+import { getInventory, getInventoryAlerts, updateStockBySku } from '../controllers/inventoryController.js';
 import { authenticateUser } from '../middlewares/auth.js';
 
 const router = express.Router();

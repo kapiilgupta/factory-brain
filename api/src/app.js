@@ -11,6 +11,9 @@ import authRouter from "./routes/auth.js"
 import productRouter from "./routes/product.js"
 import inventoryRouter from "./routes/inventory.js"
 import machinesRouter from "./routes/machines.js"
+import forecastRouter from "./routes/forecast.js"
+import orderRouter from "./routes/orders.js"
+import scheduleRouter from "./routes/schedule.js"
 
 // Connect to MongoDB
 connectDB();
@@ -38,6 +41,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
 app.use('/api/inventory', inventoryRouter);
 app.use('/api/machines', machinesRouter)
+app.use('/api/forecast', forecastRouter)
+app.use('/api/orders', orderRouter)
+app.use('/api/schedule', scheduleRouter)
 
 //Fallback for unknown API routes
 app.use('/api/*', (req, res) => {
