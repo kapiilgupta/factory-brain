@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata: Metadata = {
   title: 'Factory Brain — Production Management SaaS',
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark h-full antialiased">
       <body className="min-h-full bg-surface-bg text-slate-100 flex flex-col">
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

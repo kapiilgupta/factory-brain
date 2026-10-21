@@ -16,17 +16,23 @@ const ROUTE_TITLES: Record<string, { title: string; subtitle: string }> = {
 
 export default function Topbar() {
     const pathname = usePathname();
+    const [todayStr, setTodayStr] = React.useState<string>('Live Shift');
+
+    React.useEffect(() => {
+        setTodayStr(
+            new Date().toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+            })
+        );
+    }, []);
+
     const currentMeta = ROUTE_TITLES[pathname] || {
         title: pathname.replace('/', '').toUpperCase() || 'Dashboard',
         subtitle: 'Factory Brain Manufacturing Operations',
     };
-
-    const todayStr = new Date().toLocaleDateString('en-US', {
-        weekday: 'short',
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-    });
 
     return (
         <header className="h-16 bg-[#090d16]/80 backdrop-blur-md border-b border-slate-800 px-6 flex items-center justify-between sticky top-0 z-20">
