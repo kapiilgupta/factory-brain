@@ -14,6 +14,7 @@ import machinesRouter from "./routes/machines.js"
 import forecastRouter from "./routes/forecast.js"
 import orderRouter from "./routes/orders.js"
 import scheduleRouter from "./routes/schedule.js"
+import dashboardRouter from "./routes/dashboard.js"
 
 // Connect to MongoDB
 connectDB();
@@ -44,6 +45,7 @@ app.use('/api/machines', machinesRouter)
 app.use('/api/forecast', forecastRouter)
 app.use('/api/orders', orderRouter)
 app.use('/api/schedule', scheduleRouter)
+app.use('/api/dashboard', dashboardRouter)
 
 //Fallback for unknown API routes
 app.use('/api/*', (req, res) => {
