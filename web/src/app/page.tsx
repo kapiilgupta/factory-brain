@@ -231,7 +231,7 @@ export default function LandingPage() {
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} Factory Brain. Autonomous Production Management Platform.</p>
+          <p>© 2026 Factory Brain. Autonomous Production Management Platform.</p>
           <div className="flex items-center gap-6">
             <Link href="/login" className="hover:text-slate-300">Sign In</Link>
             <Link href="/register" className="hover:text-slate-300">Register</Link>
